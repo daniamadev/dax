@@ -1,0 +1,10 @@
+//criar calendário automático, sem incrementação
+
+Calendario = ADDCOLUMNS (
+    CALENDAR (DATE(2020, 01, 01),
+    DATE(2022, 01, 01)),
+    "Year", YEAR ( [Date] ),
+    "Trimestre", "T" & QUARTER( ( [Date] )),
+    "Month", FORMAT ( [Date], "mmmm" ),
+    "Month Number", MONTH ( [Date] )
+)
